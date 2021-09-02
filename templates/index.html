@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <form action="/image-process" method="POST" class="mini-container">
+        <div class="text-wrapper">
+            <h1>Obten la paleta de colores bro!</h1>
+            <h2>🤩🤗😏😛🤓</h2>
+        </div>
+        <label for="image_url">
+            <h3>URL de la imagen</h3>
+            <input class="input" required type="text" name="image_url" >
+        </label>
+        <label for="n_colors">
+            <h3>Número de colores</h3>
+            <input class="input" required type="text" name="n_colors" >
+        </label>
+        <input class="input" type="submit" value="Okay!">
+    </form>
+
+    <script>
+    function getRandomColor() {
+        let color = []
+        for (var i = 0; i < 3; i++) {
+            color[i] = Math.floor(Math.random() * 255);
+        }
+        return color;
+    }
+
+    function setRandomColor() {
+        const body = document.body;
+        const inputs = document.querySelectorAll('.input');
+
+        let color = getRandomColor();
+        body.style.backgroundColor = `rgba(${color[0]},${color[1]},${color[2]}, 0.3)`;
+        for(input of inputs){
+            input.style.backgroundColor = `rgba(${color[0]},${color[1]},${color[2]}, 0.3)`;
+        }
+        inputs[inputs.length - 1].style.backgroundColor = `rgba(${color[0]},${color[1]},${color[2]}, 0.6)`
+
+    }
+    setRandomColor();
+    setInterval(() => setRandomColor(), 3000);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors!</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="{{context.image_path}}" alt="image">
+        <div class="container__colors">
+            {% for color in context.colors %}
+                <div class="container__colors--item" style="background-color: rgb({{color[0]}},{{color[1]}},{{color[2]}});"></div>
+            {% endfor %}
+        </div>
+        <a href="/"><img class='back-arrow'src="https://img.icons8.com/glyph-neue/64/000000/back.png"/></a>
+    </div>
+
+    <script>
+        function getRandomColor() {
+            let color = []
+            for (var i = 0; i < 3; i++) {
+                color[i] = Math.floor(Math.random() * 255);
+            }
+            return color;
+        }
+
+        function setRandomColor() {
+            const body = document.querySelector('.container');
+            let color = getRandomColor();
+            body.style.backgroundColor = `rgba(${color[0]},${color[1]},${color[2]}, 0.3)`;
+
+        }
+        setRandomColor();
+        setInterval(() => setRandomColor(), 3000);
+    </script>
+</body>
+</html>

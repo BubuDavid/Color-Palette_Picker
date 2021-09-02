@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap");
+
+*
+    padding: 0
+    margin: 0
+    font-family: 'Nunito'
+    box-sizing: border-box
+
+body
+    width: 100vw
+    height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: 500ms ease
+    background-color: #F0E5CF
+
+.mini-container
+    width: 40%
+    height: 90%
+    background: #fff
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+    border-radius: 20px
+    text-align: center
+    & h1
+        height: 4rem
+    & label
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+input
+    width: 70%
+    height: 3rem
+    border: 0
+    padding: 1rem
+    outline: none
+    color: #595260
+    border-radius: 20px
+    font-size: 1.2rem
+    transition: 500ms ease
+    text-align: center
+    &::placeholder
+        font-size: 1.2rem
+    &[type=submit]
+        padding: 0
+        cursor: pointer
+        font-size: 2rem
+        font-weight: bolder
+        width: 20%
+
+
+.container
+    width: 80%
+    height: 90%
+    display: flex
+    background-color: #fff
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+    border-radius: 20px
+    transition: 500ms ease
+    position: relative
+    & img
+        width: 40%
+        height: auto
+        border-radius: 20px
+        overflow: hidden
+        object-fit: cover
+    &__colors
+        display: flex
+        width: 70%
+        height: 50px
+        &--item
+            height: 100%
+            width: 20px
+            flex: 1
+            margin-right: 0.7rem
+            border-radius: 20px
+            cursor: pointer
+            transition: all 450ms ease
+            &:hover
+                transform: scale(1.2)
+    & .back-arrow
+        width: 50px
+        height: 50px
+        position: absolute
+        z-index: 999
+        top: 10px
+        left: 10px
+        cursor: pointer
+
+.btn
+    border-radius: 100%
+    background: #FFB344
+    width: 150px
+    height: 150px
+    color: #fff
+    font-size: 2rem
+    text-decoration: none
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 100px
+    transition: 450ms ease
+    &:hover
+        transform: scale(1.4)
