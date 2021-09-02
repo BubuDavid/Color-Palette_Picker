@@ -6,6 +6,9 @@ App built with 🐍`Python`, 🧪`Flask` a little bit of 🤓`JavaScript`. Prett
 - flask 2.0+
 - colorgram<span>.</span>py 1.0+
 
+# Visit me!
+You can visit the page on Glitch! Just go to this [link](http://color-palette-bubupicker.glitch.me/) and wait a little bit.
+
 # Setup
 To get ready just follow the instructions.
 
