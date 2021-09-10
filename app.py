@@ -1,5 +1,5 @@
 # Import important imports
-import colorgram
+from models.color_picker import get_palette
 from flask import Flask, render_template, request, session, redirect
 from urllib.request import urlretrieve
 import os
@@ -16,7 +16,7 @@ def color_picker_method():
     try:
         # Grab the params
         image_url = request.form['image_url']
-        n_colors  = request.form['n_colors']
+        n_colors  = int(request.form['n_colors'])
         # Downloading the image
         image_path = "static/images/image.jpg"
         # Delete the image if exists
@@ -26,15 +26,14 @@ def color_picker_method():
             pass
         urlretrieve(image_url, image_path)
         # Extract 6 colors from an image
-        colors_weird = colorgram.extract(image_path, int(n_colors))
-        # Process the colors so we use them on the template
-        colors = []
-        for color in colors_weird:
-            colors.append([color.rgb[0], color.rgb[1], color.rgb[2]])
+        colors = get_palette(image_path, n_colors)
 
         # Store the parameters into session
         session['colors'] = colors
         session['image_path'] = image_path 
+        print('-------------')
+        print(colors)
+        print('-------------')
         # Render our template
         return redirect("/image-view")
     except:

@@ -1,2 +1,4 @@
 flask
-colorgram.py
+scikit-learn
+opencv-python
+numpy
