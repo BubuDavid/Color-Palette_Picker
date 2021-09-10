@@ -10,6 +10,9 @@ App built with 🐍`Python`, 🧪`Flask`, 🤓`OpenCV` and 👩‍🔬`scikit-le
 - opencv-python
 - numpy
 
+# Visit me!
+You can visit the page on Glitch! Just go to this [link](http://color-palette-bubupicker.glitch.me/) and wait a little bit.
+
 # Setup
 
 To get ready just follow the instructions.
