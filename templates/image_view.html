@@ -11,7 +11,8 @@
             <img src="{{ context.image_path }}" alt="image">
             <div class="container__colors">
                 {% for color in context.colors %}
-                    <div class="container__colors--item" style="background-color: rgb({{ color[0] }},{{ color[1] }},{{ color[2] }});"></div>
+                    <div class="container__colors--item" id="i{{ loop.index }}"></div>
+
                 {% endfor %}
             </div>
             <a href="/"><img class='back-arrow' src="https://img.icons8.com/glyph-neue/64/000000/back.png"/></a>
@@ -41,5 +42,14 @@
             setRandomColor();
             setInterval(() => setRandomColor(), 3000);
         </script>
+
+        <style>
+            {% for color,dist in context.colors | zip(context.distribution) %}
+                #i{{loop.index}}{
+                    background: rgb({{ color[0] }}, {{ color[1] }}, {{ color[2] }});
+                    width: {{dist * 100}}%
+                }
+            {% endfor %}
+        </style>
     </body>
 </html>

@@ -61,13 +61,13 @@ input
     width: 80%
     height: 90%
     display: flex
-    background-color: #fff
     flex-direction: column
     align-items: center
     justify-content: space-around
     border-radius: 20px
     transition: 500ms ease
     position: relative
+    padding: 0 1rem
     & img
         width: 40%
         height: auto
@@ -76,18 +76,18 @@ input
         object-fit: cover
     &__colors
         display: flex
-        width: 70%
+        width: 100%
         height: 50px
         &--item
             height: 100%
             width: 20px
-            flex: 1
             margin-right: 0.7rem
             border-radius: 20px
             cursor: pointer
+            background: rgb(255, 255, 255);
             transition: all 450ms ease
             &:hover
-                transform: scale(1.2)
+                transform: scale(1.1)
     & .back-arrow
         width: 50px
         height: 50px
@@ -111,7 +111,7 @@ input
     margin-bottom: 100px
     transition: 450ms ease
     &:hover
-        transform: scale(1.4)
+        transform: scale(1.2)
 
 
 @media only screen and ( max-width:1200px  )
