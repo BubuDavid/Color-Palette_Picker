@@ -25,11 +25,11 @@
 <br />
 <p align="center">
 
-  <h3 align="center"><a href="http://color-palette-bubupicker.glitch.me/">Bubu color picker!</a></h3>
+  <h3 align="center"><a href="https://palette-bubupicker.glitch.me">Bubu color picker!</a></h3>
 
   <p align="center">
     Simple two-page app where you can obtain the color palette of any pictore on the internet and the ratios in which this one appears in the image.
-    Check the working project <a href="http://color-palette-bubupicker.glitch.me/">here</a>, but that link is an older version, glitch doesn't support open-cv and scikit-learn in a free account project. This older version uses colorgram, another python library for color picker, but is cooler the version of this repo, works almost identically, the difference is the color picker methods.
+    Check the working project <a href="https://palette-bubupicker.glitch.me">here</a>, but that link is an older version, glitch doesn't support open-cv and scikit-learn in a free account project. This older version uses colorgram, another python library for color picker, but is cooler the version of this repo, works almost identically, the difference is the color picker methods.
     <br />
     <a href="https://github.com/BubuDavid/Color-Palette_Picker.git"><strong>Explore the docs »</strong></a>
     <br />
@@ -70,9 +70,9 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](http://color-palette-bubupicker.glitch.me/)
+[![Product Name Screen Shot][product-screenshot]](https://palette-bubupicker.glitch.me)
 
-Check [this page](http://color-palette-bubupicker.glitch.me/) to see the project working!
+Check [this page](https://palette-bubupicker.glitch.me) to see the project working!
 
 In this project I use flask, numpy, scikit-learn and openCV python libraries partnering with HTML, SASS and Javascript Vanilla to develope a pretty simple 2-page app, basically you give an image and the app with a K-NN algorithm applied to the image gives you the color palette of that image, these are the rules:
 
